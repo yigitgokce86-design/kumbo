@@ -78,91 +78,129 @@ export function LoginForm() {
     }
 
     return (
-        <Card className="bg-white w-full max-w-md mx-auto border-4 border-emerald-50 shadow-2xl rounded-[2rem]">
-            <CardHeader>
-                <CardTitle className="text-center text-3xl font-black text-emerald-950">Giriş Yap</CardTitle>
-                <CardDescription className="text-center text-emerald-700 font-medium">Kumbo hesabına eriş</CardDescription>
-            </CardHeader>
-            <CardContent>
-                <Tabs defaultValue="child" className="w-full">
-                    <TabsList className="grid w-full grid-cols-2 mb-4">
-                        <TabsTrigger value="child">
-                            <User className="w-4 h-4 mr-2" /> Çocuk
-                        </TabsTrigger>
-                        <TabsTrigger value="parent">
-                            <Shield className="w-4 h-4 mr-2" /> Ebeveyn
-                        </TabsTrigger>
-                    </TabsList>
+        <div className="w-full max-w-lg mx-auto p-4 animate-in fade-in zoom-in duration-500">
+            <Card className="toy-card border-none p-8 space-y-8">
+                <CardHeader className="p-0 space-y-4 text-center">
+                    <div className="mx-auto w-20 h-2 bg-emerald-100 rounded-full mb-4" /> {/* Decorative Handle */}
+                    <CardTitle className="text-4xl font-black text-slate-800 tracking-tight">Giriş Yap</CardTitle>
+                    <CardDescription className="text-lg text-slate-500 font-bold">Kumbo hesabına eriş</CardDescription>
+                </CardHeader>
+                <CardContent className="p-0">
+                    <Tabs defaultValue="child" className="w-full">
+                        <TabsList className="grid w-full grid-cols-2 mb-8 h-14 bg-slate-100 p-1 rounded-2xl">
+                            <TabsTrigger
+                                value="child"
+                                className="h-full rounded-xl text-lg font-bold data-[state=active]:bg-white data-[state=active]:text-emerald-600 data-[state=active]:shadow-sm transition-all"
+                            >
+                                <User className="w-5 h-5 mr-2" /> Çocuk
+                            </TabsTrigger>
+                            <TabsTrigger
+                                value="parent"
+                                className="h-full rounded-xl text-lg font-bold data-[state=active]:bg-white data-[state=active]:text-purple-600 data-[state=active]:shadow-sm transition-all"
+                            >
+                                <Shield className="w-5 h-5 mr-2" /> Ebeveyn
+                            </TabsTrigger>
+                        </TabsList>
 
-                    <TabsContent value="child">
-                        <div className="flex flex-col items-center mb-6 space-y-2">
-                            <Character variant="guide" size="sm" speaking />
-                            <p className="text-center text-muted-foreground text-sm font-medium">
-                                {MICROCOPY.onboarding[currentTheme]}
-                            </p>
-                        </div>
-                        <form onSubmit={childForm.handleSubmit(onChildSubmit)} className="space-y-4">
-                            <div className="space-y-2">
-                                <Label htmlFor="pin">Gizli Kodun (PIN)</Label>
-                                <div className="relative">
+                        <TabsContent value="child" className="space-y-8">
+                            <div className="flex flex-col items-center space-y-4 py-4 bg-emerald-50/50 rounded-3xl border border-emerald-100 border-dashed">
+                                <Character variant="guide" size="md" speaking />
+                                <p className="text-center text-emerald-800 text-lg font-bold px-4 max-w-xs leading-tight">
+                                    "{MICROCOPY.onboarding[currentTheme]}"
+                                </p>
+                            </div>
+
+                            <form onSubmit={childForm.handleSubmit(onChildSubmit)} className="space-y-6">
+                                <div className="space-y-4">
+                                    <Label htmlFor="pin" className="block text-center text-slate-400 font-bold uppercase tracking-widest text-sm">Gizli Kodun (PIN)</Label>
+                                    <div className="relative max-w-[200px] mx-auto">
+                                        <Input
+                                            id="pin"
+                                            type="password"
+                                            placeholder="••••"
+                                            className="toy-input text-center text-4xl tracking-[0.5em] h-20 bg-white border-4 border-emerald-100 text-emerald-600 rounded-2xl focus:border-emerald-400 focus:ring-4 focus:ring-emerald-100 shadow-inner placeholder:text-emerald-100 font-black"
+                                            maxLength={4}
+                                            {...childForm.register("pin")}
+                                        />
+                                    </div>
+                                    {childForm.formState.errors.pin && (
+                                        <p className="text-center text-red-500 font-bold animate-pulse">{childForm.formState.errors.pin.message}</p>
+                                    )}
+                                </div>
+
+                                <Button
+                                    type="submit"
+                                    className="w-full h-16 text-xl rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-white shadow-[0_6px_0_0_#059669] active:shadow-none active:translate-y-[6px] transition-all font-black uppercase tracking-wide"
+                                    disabled={loading}
+                                >
+                                    {loading ? "GİRİLİYOR..." : "BAŞLA! 🚀"}
+                                </Button>
+                            </form>
+                        </TabsContent>
+
+                        <TabsContent value="parent" className="space-y-6">
+                            <form onSubmit={parentForm.handleSubmit(onParentSubmit)} className="space-y-6">
+                                <div className="space-y-2">
+                                    <Label htmlFor="email" className="font-bold text-slate-700 ml-1">E-posta</Label>
                                     <Input
-                                        id="pin"
-                                        type="password"
-                                        placeholder="****"
-                                        className="text-center text-3xl tracking-[1em] h-20 bg-emerald-50 border-2 border-emerald-100 text-emerald-900 rounded-2xl focus-visible:ring-emerald-400 placeholder:tracking-normal placeholder:text-emerald-900/20 font-black"
-                                        maxLength={4}
-                                        {...childForm.register("pin")}
+                                        id="email"
+                                        type="email"
+                                        placeholder="ornek@kumbo.app"
+                                        className="toy-input h-14 bg-slate-50 border-2 border-slate-200"
+                                        {...parentForm.register("email")}
                                     />
+                                    {parentForm.formState.errors.email && (
+                                        <p className="text-sm text-red-500 font-bold">{parentForm.formState.errors.email.message}</p>
+                                    )}
                                 </div>
-                                {childForm.formState.errors.pin && (
-                                    <p className="text-sm text-destructive">{childForm.formState.errors.pin.message}</p>
-                                )}
-                            </div>
-                            <Button type="submit" className="w-full" size="lg" disabled={loading} variant="premium">
-                                {loading ? "Giriliyor..." : "Başla!"}
-                            </Button>
-                        </form>
-                    </TabsContent>
-
-                    <TabsContent value="parent">
-                        <form onSubmit={parentForm.handleSubmit(onParentSubmit)} className="space-y-4">
-                            <div className="space-y-2">
-                                <Label htmlFor="email">E-posta</Label>
-                                <Input id="email" type="email" placeholder="ornek@kumbo.app" {...parentForm.register("email")} />
-                                {parentForm.formState.errors.email && (
-                                    <p className="text-sm text-destructive">{parentForm.formState.errors.email.message}</p>
-                                )}
-                            </div>
-                            <div className="space-y-2">
-                                <Label htmlFor="password">Şifre</Label>
-                                <Input id="password" type="password" {...parentForm.register("password")} />
-                                {parentForm.formState.errors.password && (
-                                    <p className="text-sm text-destructive">{parentForm.formState.errors.password.message}</p>
-                                )}
-                            </div>
-                            <div className="relative my-4">
-                                <div className="absolute inset-0 flex items-center">
-                                    <span className="w-full border-t border-muted" />
+                                <div className="space-y-2">
+                                    <Label htmlFor="password" class="font-bold text-slate-700 ml-1">Şifre</Label>
+                                    <Input
+                                        id="password"
+                                        type="password"
+                                        className="toy-input h-14 bg-slate-50 border-2 border-slate-200"
+                                        {...parentForm.register("password")}
+                                    />
+                                    {parentForm.formState.errors.password && (
+                                        <p className="text-sm text-red-500 font-bold">{parentForm.formState.errors.password.message}</p>
+                                    )}
                                 </div>
-                                <div className="relative flex justify-center text-xs uppercase">
-                                    <span className="bg-background px-2 text-muted-foreground">veya</span>
+
+                                <div className="pt-4 space-y-3">
+                                    <Button
+                                        type="submit"
+                                        className="w-full h-14 rounded-xl bg-slate-900 hover:bg-slate-800 text-white shadow-[0_4px_0_0_#000] active:shadow-none active:translate-y-[4px] transition-all font-bold"
+                                        disabled={loading}
+                                    >
+                                        {loading ? "Kontrol ediliyor..." : "Giriş Yap"}
+                                    </Button>
+
+                                    <div className="relative py-2">
+                                        <div className="absolute inset-0 flex items-center">
+                                            <span className="w-full border-t border-slate-200" />
+                                        </div>
+                                        <div className="relative flex justify-center text-xs uppercase">
+                                            <span className="bg-white px-2 text-slate-400 font-bold">veya</span>
+                                        </div>
+                                    </div>
+
+                                    <Button
+                                        type="button"
+                                        variant="outline"
+                                        className="w-full h-14 rounded-xl border-2 border-slate-200 text-slate-600 font-bold hover:bg-slate-50 hover:text-slate-900"
+                                        onClick={handleGoogleLogin}
+                                    >
+                                        <svg className="mr-2 h-5 w-5" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                                            <path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path>
+                                        </svg>
+                                        Google ile Devam Et
+                                    </Button>
                                 </div>
-                            </div>
-
-                            <Button type="button" variant="outline" className="w-full mb-2" onClick={handleGoogleLogin}>
-                                <svg className="mr-2 h-4 w-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
-                                    <path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path>
-                                </svg>
-                                Google ile Giriş Yap
-                            </Button>
-
-                            <Button type="submit" className="w-full" disabled={loading}>
-                                {loading ? "Kontrol ediliyor..." : "E-posta ile Giriş Yap"}
-                            </Button>
-                        </form>
-                    </TabsContent>
-                </Tabs>
-            </CardContent>
-        </Card>
+                            </form>
+                        </TabsContent>
+                    </Tabs>
+                </CardContent>
+            </Card>
+        </div>
     )
 }
