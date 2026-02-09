@@ -154,7 +154,7 @@ export function LoginForm() {
                                     )}
                                 </div>
                                 <div className="space-y-2">
-                                    <Label htmlFor="password" class="font-bold text-slate-700 ml-1">Şifre</Label>
+                                    <Label htmlFor="password" className="font-bold text-slate-700 ml-1">Şifre</Label>
                                     <Input
                                         id="password"
                                         type="password"
