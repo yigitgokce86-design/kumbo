@@ -50,7 +50,7 @@ export function LoginForm() {
         // Simulating a successful login for "Can" (Child)
         // We'll update this to real auth if the user has a way to auth kids (usually via Parent's account + PIN)
         setTimeout(() => {
-            setUser({ id: 'demo-child-id', name: 'Can', role: 'child' })
+            setUser({ id: 'demo-child-id', full_name: 'Can', role: 'child' } as any) // temporary cast or correct type
             setLoading(false)
             router.push('/dashboard')
         }, 1000)

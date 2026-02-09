@@ -19,7 +19,7 @@ export default function ParentDashboard() {
 
     // Calculators
     const totalGoals = goals.length
-    const totalSavings = goals.reduce((acc, g) => acc + g.currentAmount, 0)
+    const totalSavings = goals.reduce((acc, g) => acc + g.current_amount, 0)
 
     return (
         <div className="flex flex-col gap-8 p-4 pb-24 max-w-4xl mx-auto">
@@ -36,7 +36,7 @@ export default function ParentDashboard() {
             </div>
 
             {/* Child Overview */}
-            <h2 className="text-xl font-bold text-slate-700">Genel Bakış: {user?.name || "Çocuğunuz"}</h2>
+            <h2 className="text-xl font-bold text-slate-700">Genel Bakış: {user?.full_name || user?.username || "Çocuğunuz"}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Card className="p-6 bg-white border-none shadow-sm rounded-[2rem] flex flex-col items-center justify-center text-center space-y-2">
                     <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">TOPLAM BİRİKİM</span>

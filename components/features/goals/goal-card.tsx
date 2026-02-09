@@ -2,7 +2,8 @@
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { useStore, type Goal } from "@/lib/store/use-store"
+import { useStore } from "@/lib/store/use-store"
+import { type Goal } from "@/types/supabase"
 import { useTheme } from "@/lib/store/use-theme"
 import { motion } from "framer-motion"
 import { Plus, Trophy } from "lucide-react"
@@ -18,7 +19,7 @@ export function GoalCard({ goal }: GoalCardProps) {
     const { config } = useTheme()
 
     // Calculate progress
-    const percentage = Math.min(100, Math.round((goal.currentAmount / goal.targetAmount) * 100))
+    const percentage = Math.min(100, Math.round((goal.current_amount / goal.target_amount) * 100))
     const isCompleted = percentage >= 100
 
     return (
@@ -35,7 +36,7 @@ export function GoalCard({ goal }: GoalCardProps) {
                 {/* Image Section */}
                 <div className="h-32 w-full relative overflow-hidden bg-muted">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={goal.imageUrl} alt={goal.title} className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                    <img src={goal.image_url} alt={goal.title} className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" />
 
                     {/* Gradient Overlay for Text Readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
@@ -53,8 +54,8 @@ export function GoalCard({ goal }: GoalCardProps) {
                     {/* Financial Progress */}
                     <div className="flex justify-between items-end">
                         <div>
-                            <span className={cn("text-3xl font-bold", config.colors.textMain)}>₺{goal.currentAmount}</span>
-                            <span className={cn("text-sm", config.colors.textMuted)}> / ₺{goal.targetAmount}</span>
+                            <span className={cn("text-3xl font-bold", config.colors.textMain)}>₺{goal.current_amount}</span>
+                            <span className={cn("text-sm", config.colors.textMuted)}> / ₺{goal.target_amount}</span>
                         </div>
                         <div className={cn("text-xl font-bold", config.colors.textMain)}>{percentage}%</div>
                     </div>

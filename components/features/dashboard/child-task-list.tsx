@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { CheckCircle, Circle, Clock, Loader2 } from "lucide-react"
 import { useState } from "react"
 import { Task } from "@/types/supabase"
+import confetti from "canvas-confetti"
 
 export function ChildTaskList() {
     const { tasks, updateTaskStatus } = useStore()
@@ -17,9 +18,6 @@ export function ChildTaskList() {
     const activeTasks = tasks.filter(t => t.status === 'pending')
     const waitingApprovalTasks = tasks.filter(t => t.status === 'completed')
 
-    import confetti from "canvas-confetti"
-
-    // ...
 
     const handleComplete = async (taskId: string) => {
         setLoadingId(taskId)

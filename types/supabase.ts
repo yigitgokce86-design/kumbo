@@ -29,6 +29,7 @@ export interface Task {
     assigned_to: string // Child ID
     created_by: string // Parent ID
     proof_image_url?: string
+    created_at?: string
 }
 
 export interface Goal {

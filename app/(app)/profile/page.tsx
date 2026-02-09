@@ -34,7 +34,7 @@ export default function ProfilePage() {
                     </div>
                 </div>
 
-                <h2 className="text-2xl font-black text-emerald-950 mt-2">{user?.name || "Kaşif"}</h2>
+                <h2 className="text-2xl font-black text-emerald-950 mt-2">{user?.full_name || user?.username || "Kaşif"}</h2>
                 <p className="text-emerald-600 font-medium text-sm mb-6">{user?.role === 'child' ? 'Minik Yatırımcı' : 'Ebeveyn'}</p>
 
                 {/* XP Progress */}

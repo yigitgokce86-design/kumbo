@@ -10,7 +10,7 @@ export default function GoalsPage() {
     const { goals, user } = useStore()
 
     // Calculate total savings
-    const totalSavings = goals.reduce((acc, goal) => acc + goal.currentAmount, 0)
+    const totalSavings = goals.reduce((acc, goal) => acc + goal.current_amount, 0)
 
     return (
         <Shell>
@@ -19,7 +19,7 @@ export default function GoalsPage() {
                     <div>
                         <h1 className="text-3xl font-bold tracking-tight">Hedeflerim</h1>
                         <p className="text-muted-foreground">
-                            {user ? `Merhaba ${user.name}, ` : ''}Toplam birikimin: <span className="text-primary font-bold text-lg">₺{totalSavings}</span>
+                            {user ? `Merhaba ${user.full_name || user.username}, ` : ''}Toplam birikimin: <span className="text-primary font-bold text-lg">₺{totalSavings}</span>
                         </p>
                     </div>
                     <Button variant="premium">

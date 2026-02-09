@@ -31,6 +31,7 @@ interface StoreState {
     updateTaskStatus: (taskId: string, status: Task['status']) => Promise<void>
     approveAllTasks: (childId: string) => Promise<void>
     addGoal: (title: string, amount: number) => Promise<void>
+    setUser: (user: Profile | null) => void
 
     // Badge Actions
     fetchBadges: () => Promise<void>
@@ -51,6 +52,8 @@ export const useStore = create<StoreState>((set, get) => ({
     xp: 0,
     completedLessons: [],
     badges: MOCK_BADGES,
+
+    setUser: (user) => set({ user }),
 
     fetchUser: async () => {
         const supabase = createClient()
