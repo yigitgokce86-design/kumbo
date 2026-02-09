@@ -8,6 +8,7 @@ import { Character } from "@/components/ui/character"
 import { Plus, Target } from "lucide-react"
 import { TransactionModal } from "@/components/features/dashboard/transaction-modal"
 import FamilyDashboard from "@/components/features/dashboard/parent-dashboard"
+import { ChildTaskList } from "@/components/features/dashboard/child-task-list"
 
 export default function DashboardPage() {
     const { user, goals, fetchGoals } = useStore()
@@ -84,10 +85,6 @@ export default function DashboardPage() {
                     </div>
                 </div>
             </Card>
-
-            import {ChildTaskList} from "@/components/features/dashboard/child-task-list"
-
-            // ... inside render ...
 
             {/* Character Guidance */}
             <div className="bg-white border-2 border-emerald-100 rounded-3xl p-5 shadow-sm flex items-center gap-4 relative overflow-hidden">

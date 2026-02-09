@@ -124,24 +124,50 @@ alter table public.transactions enable row level security;
 alter table public.user_badges enable row level security;
 alter table public.user_lesson_progress enable row level security;
 
--- Basic Policies (Simplified for Phase 1)
--- Rule: Users can see their own data and family data
+-- 9. Policies (Robust: Drops before Create)
+
+-- Profiles Policies
+drop policy if exists "View own profile" on public.profiles;
 create policy "View own profile" on public.profiles for select using (id = auth.uid());
+
+drop policy if exists "View family members" on public.profiles;
 create policy "View family members" on public.profiles for select using (family_id in (select family_id from public.profiles where id = auth.uid()));
 
+-- Families Policies
+drop policy if exists "View own family" on public.families;
 create policy "View own family" on public.families for select using (id in (select family_id from public.profiles where id = auth.uid()));
 
+-- Tasks Policies
+drop policy if exists "View family tasks" on public.tasks;
 create policy "View family tasks" on public.tasks for select using (family_id in (select family_id from public.profiles where id = auth.uid()));
+
+drop policy if exists "Manage own tasks" on public.tasks;
 create policy "Manage own tasks" on public.tasks for all using (created_by = auth.uid() or assigned_to = auth.uid());
 
+-- Goals Policies
+drop policy if exists "View own goals" on public.goals;
 create policy "View own goals" on public.goals for select using (owner_id = auth.uid() or owner_id in (select id from public.profiles where family_id in (select family_id from public.profiles where id = auth.uid()) and role = 'child'));
+
+drop policy if exists "Manage own goals" on public.goals;
 create policy "Manage own goals" on public.goals for all using (owner_id = auth.uid());
 
+-- Transactions Policies
+drop policy if exists "View own transactions" on public.transactions;
 create policy "View own transactions" on public.transactions for select using (user_id = auth.uid());
+
+drop policy if exists "Insert own transactions" on public.transactions;
 create policy "Insert own transactions" on public.transactions for insert with check (user_id = auth.uid());
 
+-- Badges Policies
+drop policy if exists "View badges" on public.user_badges;
 create policy "View badges" on public.user_badges for select using (user_id = auth.uid());
+
+drop policy if exists "Insert badges" on public.user_badges;
 create policy "Insert badges" on public.user_badges for insert with check (user_id = auth.uid());
 
+-- Progress Policies
+drop policy if exists "View progress" on public.user_lesson_progress;
 create policy "View progress" on public.user_lesson_progress for select using (user_id = auth.uid());
+
+drop policy if exists "Insert progress" on public.user_lesson_progress;
 create policy "Insert progress" on public.user_lesson_progress for insert with check (user_id = auth.uid());
