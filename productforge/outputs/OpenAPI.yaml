@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: Kumbo API
+  version: 1.0.0
+  description: Core API for Kumbo Family Finance App
+paths:
+  /family/create:
+    post:
+      summary: Create a new family
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        '200':
+          description: Family created successfully
+  /tasks/create:
+    post:
+      summary: Create a new task (Parent only)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                reward_amount:
+                  type: number
+                assigned_to_id:
+                  type: string
+  /goals/add-funds:
+    post:
+      summary: Transfer money from wallet to goal
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                goal_id:
+                  type: string
+                amount:
+                  type: number
+components:
+  schemas:
+    Task:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        status:
+          type: string
+          enum: [pending, completed, approved]

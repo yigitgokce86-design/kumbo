@@ -1,0 +1,9 @@
+KPI_ID,Name,Definition,Target,Frequency,Owner
+KPI-001,Activation Rate,% of new signups who create at least 1 child profile + 1 goal within 24h,>40%,Daily,Product
+KPI-002,D7 Retention,% of users active on Day 7 after signup,>30%,Weekly,Growth
+KPI-003,Goal Completion Rate,% of goals created that reach 100% funding,>25%,Monthly,Product
+KPI-004,Task Completion Velocity,Avg tasks completed per active child per week,>3,Weekly,Product
+KPI-005,Parent Approval Time,Avg time between task_completed and task_approved,<12h,Weekly,UX
+KPI-006,Cash Usage Rate,% of total transaction volume that is flagged as 'Cash Entry',Track Only,Monthly,Product
+KPI-007,Pro Mode Adoption,% of eligible children (11-14) who opt-in to Pro Mode,>60%,Monthly,UX
+KPI-008,Churn Rate,% of paying families (if applicable) who cancel subscription,<5%,Monthly,Finance

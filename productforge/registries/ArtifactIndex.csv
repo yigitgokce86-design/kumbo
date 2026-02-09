@@ -1,0 +1,7 @@
+ArtifactID,FileName,FilePath,Stage,CreatedBy,CreatedDate,Version,Status,Description
+ART-0001,venture_context.md,productforge/inputs/venture_context.md,00,Domain Mentor,2026-02-09,1.0,Active,Venture context SSOT with problem space and constraints
+ART-0002,MentorBriefingPack.md,productforge/outputs/MentorBriefingPack.md,00,Domain Mentor,2026-02-09,1.0,Active,North Star vision and strategic direction
+ART-0003,DecisionGuardrails.md,productforge/outputs/DecisionGuardrails.md,00,Domain Mentor,2026-02-09,1.0,Active,Non-negotiable decision rules
+ART-0004,AssumptionRiskMap.csv,productforge/outputs/AssumptionRiskMap.csv,00,Domain Mentor,2026-02-09,1.1,Active,Prioritized assumptions and risks (updated Stage 01)
+ART-0005,ICP_JTBD.md,productforge/outputs/ICP_JTBD.md,01,Service Designer,2026-02-09,1.0,Active,Ideal Customer Profile and Jobs-to-be-Done
+ART-0006,ProblemStatement.md,productforge/outputs/ProblemStatement.md,01,Service Designer,2026-02-09,1.0,Active,Actionable problem definition with root cause analysis

@@ -1,0 +1,68 @@
+[
+    {
+        "event_name": "app_open",
+        "description": "User opens the app",
+        "properties": {
+            "user_type": "child|parent",
+            "mode": "play|pro|parent",
+            "timestamp": "ISO8601"
+        }
+    },
+    {
+        "event_name": "onboarding_start",
+        "description": "User begins onboarding flow",
+        "properties": {
+            "source": "organic|invite|marketing"
+        }
+    },
+    {
+        "event_name": "onboarding_complete",
+        "description": "User completes registration",
+        "properties": {
+            "family_role": "admin",
+            "children_count": "integer"
+        }
+    },
+    {
+        "event_name": "goal_created",
+        "description": "Child creates a new saving goal",
+        "properties": {
+            "goal_amount": "float",
+            "goal_category": "toy|game|tech|other",
+            "has_image": "boolean"
+        }
+    },
+    {
+        "event_name": "task_completed",
+        "description": "Child marks a task as done",
+        "properties": {
+            "task_type": "recurring|one-off",
+            "reward_value": "float"
+        }
+    },
+    {
+        "event_name": "task_approved",
+        "description": "Parent approves task completion",
+        "properties": {
+            "time_to_approve": "seconds",
+            "bonus_added": "boolean"
+        }
+    },
+    {
+        "event_name": "wallet_transaction",
+        "description": "Money moves in/out of child wallet",
+        "properties": {
+            "transaction_type": "allowance|chore|gift|spend",
+            "amount": "float",
+            "is_cash_entry": "boolean"
+        }
+    },
+    {
+        "event_name": "goal_funded",
+        "description": "Goal reaches 100%",
+        "properties": {
+            "duration_days": "integer",
+            "total_amount": "float"
+        }
+    }
+]

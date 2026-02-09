@@ -1,0 +1,9 @@
+HypothesisID,Category,Statement,Confidence,ValidationMethod,Status,LinkedEvidence,Notes
+HYP-001,Problem,Children aged 6-14 struggle to understand money because it is abstract and invisible,HIGH,SUI interviews (INS-001),Validated,SUI-0001;SUI-0003;SUI-0017,"Confirmed critical paint point ""Invisible Money"""
+HYP-002,Problem,Parents want to teach financial literacy but lack consistent structured tools,HIGH,SUI interviews (INS-004),Validated,SUI-0002;SUI-0012;SUI-0022,"Validated ""Manager Role"" burden"
+HYP-003,Solution,Visual progress bars and goal tracking will make saving tangible for children,HIGH,SUI concept testing (INS-001),Validated,SUI-0001;SUI-0016;SUI-0020,"Visual metaphors essential for younger segment"
+HYP-004,Solution,Linking chore completion to visible rewards will increase chore compliance,HIGH,SUI interviews (INS-002),Validated,SUI-0002;SUI-0006;SUI-0014,"Must be DAILY loop, not weekly"
+HYP-005,Behavior,Children who see daily progress are 2x more likely to complete savings goals,MEDIUM,MVP A/B testing (INS-005),Refined,SUI-0010;SUI-0019,"Valid for <11yo; Tweens reject ""childish"" progress UI"
+HYP-006,Adoption,Parents will adopt if onboarding takes less than 60 seconds,HIGH,SUI interviews (INS-006),Validated,SUI-0001;SUI-0012;SUI-0023,"Privacy & Simplicity are dual gates"
+HYP-007,Engagement,Gamification elements (badges/celebrations) drive weekly return visits,HIGH,SUI preference testing (INS-003),Validated,SUI-0005;SUI-0020,"Kids expect ""Game Economy"" fluency"
+HYP-008,Market,Turkish families are more receptive to educational framing than banking framing,HIGH,Market research (INS-007),Refined,SUI-0025;SUI-0024,"Receptive but require HYBRID Cash/Digital tracking"

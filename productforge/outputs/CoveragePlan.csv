@@ -1,0 +1,26 @@
+SUIID,PersonaType,Segment,ChildAge,Location,IncomeLevel,TechSavviness,TargetHypotheses,Status
+SUI-0001,Parent,Urban Professional,7,Istanbul,High,High,"HYP-001,HYP-002,HYP-006",Planned
+SUI-0002,Parent,Urban Professional,10,Istanbul,High,High,"HYP-003,HYP-004",Planned
+SUI-0003,Parent,Urban Professional,6,Ankara,Medium,High,"HYP-001,HYP-006",Planned
+SUI-0004,Parent,Urban Professional,12,Izmir,High,Medium,"HYP-002,HYP-005",Planned
+SUI-0005,Parent,Urban Professional,8,Istanbul,Medium,High,"HYP-004,HYP-007",Planned
+SUI-0006,Parent,Stay-at-Home,9,Bursa,Medium,Medium,"HYP-001,HYP-002",Planned
+SUI-0007,Parent,Stay-at-Home,7,Antalya,Low,Medium,"HYP-006,HYP-008",Planned
+SUI-0008,Parent,Stay-at-Home,11,Istanbul,Medium,Low,"HYP-002,HYP-005",Planned
+SUI-0009,Parent,Stay-at-Home,6,Ankara,Medium,High,"HYP-001,HYP-007",Planned
+SUI-0010,Parent,Stay-at-Home,14,Izmir,High,Medium,"HYP-005,HYP-008",Planned
+SUI-0011,Parent,Entrepreneur,8,Istanbul,High,High,"HYP-003,HYP-004,HYP-006",Planned
+SUI-0012,Parent,Entrepreneur,10,Ankara,High,High,"HYP-002,HYP-008",Planned
+SUI-0013,Parent,Teacher,9,Konya,Medium,Medium,"HYP-001,HYP-007",Planned
+SUI-0014,Parent,Teacher,7,Istanbul,Medium,High,"HYP-003,HYP-006",Planned
+SUI-0015,Parent,Single Parent,11,Izmir,Low,High,"HYP-002,HYP-005,HYP-008",Planned
+SUI-0016,Child Proxy,Urban Kid,8,Istanbul,High,High,"HYP-003,HYP-007",Planned
+SUI-0017,Child Proxy,Urban Kid,6,Ankara,Medium,Medium,"HYP-001,HYP-007",Planned
+SUI-0018,Child Proxy,Urban Kid,10,Istanbul,High,High,"HYP-004,HYP-005",Planned
+SUI-0019,Child Proxy,Urban Kid,12,Izmir,Medium,High,"HYP-005,HYP-008",Planned
+SUI-0020,Child Proxy,Urban Kid,7,Bursa,Medium,Medium,"HYP-003,HYP-007",Planned
+SUI-0021,Parent,Multi-Child Family,7 and 10,Istanbul,High,High,"HYP-002,HYP-004,HYP-006",Planned
+SUI-0022,Parent,Multi-Child Family,6 and 9 and 12,Ankara,Medium,Medium,"HYP-001,HYP-005",Planned
+SUI-0023,Parent,Skeptic,9,Istanbul,High,Low,"HYP-006,HYP-008",Planned
+SUI-0024,Parent,Early Adopter,8,Istanbul,High,High,"HYP-003,HYP-004,HYP-007",Planned
+SUI-0025,Parent,Traditional/Cash,10,Konya,Medium,Low,"HYP-001,HYP-002,HYP-008",Planned

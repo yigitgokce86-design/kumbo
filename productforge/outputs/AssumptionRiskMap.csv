@@ -1,0 +1,11 @@
+ID,Category,Assumption,Risk Level,Risk Description,Mitigation Strategy,Status
+ASM-001,User Behavior,Synthetic insights reflect real user behavior,HIGH,Synthetic interviews may produce "hallucinated" insights not validated by real users,Validate top 5 insights with 10+ real parent interviews before Stage 05,Open
+ASM-002,Adoption,Parents will adopt without extensive onboarding,MEDIUM,Parents may find setup too complex or time-consuming,Design 60-second onboarding; measure drop-off at each step,Open
+ASM-003,Engagement,Children will stay engaged with saving over weeks,HIGH,Gamification may be insufficient for sustained engagement,Test reward frequency and visual progress mechanics in Stage 03 interviews,Open
+ASM-004,Compliance,KVKK/GDPR-K compliance is achievable at startup scale,MEDIUM,Child data regulations may require specialized legal infrastructure,Engage KVKK consultant before Stage 07; design for minimal data collection,Open
+ASM-005,Scope,Core habit loop is sufficient for MVP,MEDIUM,Feature creep may delay launch and dilute focus,Strict PRD gate in Stage 05; no features outside Earn-Save-Achieve,Open
+ASM-006,Market,Turkish market is receptive to digital allowance tools,MEDIUM,Cultural preference for cash allowance may limit adoption,Include cash-tracking mode; research cultural attitudes in Stage 02,Open
+ASM-007,Technical,Mobile-first PWA can deliver native-like experience,LOW,PWA limitations may impact UX quality,Evaluate React Native if PWA testing underperforms in Stage 07,Open
+ASM-008,Problem,Children feel disconnected from saving progress,HIGH,If children don't actually feel this pain the core value prop fails,Validate in SUI interviews with specific scenarios about piggy banks and waiting,Open
+ASM-009,Problem,Parents struggle with consistency in allowance management,HIGH,If parents don't have this pain they won't adopt,Ask parents about failed attempts at teaching money in SUI interviews,Open
+ASM-010,Dual-User,Both parent and child must be engaged for retention,HIGH,If only one user engages the product fails,Design features requiring both users; measure paired DAU,Open

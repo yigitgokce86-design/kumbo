@@ -1,0 +1,26 @@
+SUIID,PersonaType,Segment,InterviewDate,WordCount,Status,KeyThemes,FilePath
+SUI-0001,Parent,Urban Professional,2026-02-09,850,Complete,"progress-visibility, privacy-concern, gamification",transcripts/SUI-0001.md
+SUI-0002,Parent,Urban Professional,2026-02-09,650,Complete,"immediacy-of-reward, chore-management, gamification",transcripts/SUI-0002.md
+SUI-0003,Parent,Urban Professional,2026-02-09,480,Complete,"early-childhood-abstraction, onboarding-simplicity, age-appropriate",transcripts/SUI-0003.md
+SUI-0004,Parent,Urban Professional,2026-02-09,580,Complete,"delayed-gratification, ownership-through-earning, experience-over-lecture",transcripts/SUI-0004.md
+SUI-0005,Parent,Urban Professional,2026-02-09,520,Complete,"gamification-deep, game-economy, streaks-badges",transcripts/SUI-0005.md
+SUI-0006,Parent,Stay-at-Home,2026-02-09,490,Complete,"goal-drift, visual-goal-anchor, cash-household",transcripts/SUI-0006.md
+SUI-0007,Parent,Stay-at-Home,2026-02-09,380,Complete,"accessibility-pricing, education-over-tracking, virtual-mode",transcripts/SUI-0007.md
+SUI-0008,Parent,Stay-at-Home,2026-02-09,350,Complete,"traditional-parent, earning-creates-value, tech-averse",transcripts/SUI-0008.md
+SUI-0009,Parent,Stay-at-Home,2026-02-09,360,Complete,"sticker-chart, sensory-feedback, story-based-learning",transcripts/SUI-0009.md
+SUI-0010,Parent,Stay-at-Home,2026-02-09,520,Complete,"teen-overspending, deadline-motivation, mature-UI",transcripts/SUI-0010.md
+SUI-0011,Parent,Entrepreneur,2026-02-09,450,Complete,"family-bank-simulation, power-user, high-WTP",transcripts/SUI-0011.md
+SUI-0012,Parent,Entrepreneur,2026-02-09,380,Complete,"plug-and-play, defaults-matter, education-positioning",transcripts/SUI-0012.md
+SUI-0013,Parent,Teacher,2026-02-09,400,Complete,"scaffolded-learning, curriculum-gap, gamification-balance",transcripts/SUI-0013.md
+SUI-0014,Parent,Teacher,2026-02-09,350,Complete,"daily-reinforcement, child-nudges, free-trial",transcripts/SUI-0014.md
+SUI-0015,Parent,Single Parent,2026-02-09,420,Complete,"automation-essential, low-income, money-anxiety",transcripts/SUI-0015.md
+SUI-0016,Child Proxy,Urban Kid (8),2026-02-09,320,Complete,"mascot-character, visual-growth, celebration-driven",transcripts/SUI-0016.md
+SUI-0017,Child Proxy,Urban Kid (6),2026-02-09,300,Complete,"no-text-interface, toca-boca-benchmark, goal-picture",transcripts/SUI-0017.md
+SUI-0018,Child Proxy,Urban Kid (10),2026-02-09,280,Complete,"entrepreneurial-child, earning-opportunities, task-variety",transcripts/SUI-0018.md
+SUI-0019,Child Proxy,Urban Kid (12),2026-02-09,300,Complete,"tween-autonomy, mature-aesthetic, self-set-goals",transcripts/SUI-0019.md
+SUI-0020,Child Proxy,Urban Kid (7),2026-02-09,290,Complete,"simulation-game, economy-management, spontaneous-math",transcripts/SUI-0020.md
+SUI-0021,Parent,Multi-Child Family,2026-02-09,400,Complete,"sibling-dynamics, family-pricing, fairness-tools",transcripts/SUI-0021.md
+SUI-0022,Parent,Multi-Child Family (3),2026-02-09,380,Complete,"central-dashboard, sibling-mentoring, single-source-of-truth",transcripts/SUI-0022.md
+SUI-0023,Parent,Skeptic,2026-02-09,480,Complete,"privacy-priority, screen-time-concern, evidence-required",transcripts/SUI-0023.md
+SUI-0024,Parent,Early Adopter,2026-02-09,420,Complete,"localization, beta-willing, design-sensitive",transcripts/SUI-0024.md
+SUI-0025,Parent,Traditional/Cash,2026-02-09,450,Complete,"cash-first, hybrid-tracking, simplicity-requirement",transcripts/SUI-0025.md

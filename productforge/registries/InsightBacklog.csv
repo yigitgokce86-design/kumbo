@@ -1,0 +1,8 @@
+InsightID,Title,Severity,Frequency,Status,LinkedHypotheses,ActionItem
+INS-001,Invisible Money Problem,Critical,High,Open,HYP-001,Design visual metaphors (jars/trees) for main balance screen
+INS-002,Weekly Cycle Mismatch,High,High,Open,HYP-004,Implement Daily Check-in/Reward streaks
+INS-003,Game Economy Fluency,High,Medium,Open,HYP-007,Adopt game patterns (loot boxes, dual currency)
+INS-004,Burden of Manager Role,High,High,Open,HYP-002,Build "Set & Forget" automation for allowance/chores
+INS-005,Childish Trap for Tweens,Medium,Medium,Open,HYP-005,Create distinct "Pro Mode" UI for 11-14yo
+INS-006,Privacy as Trust Gate,Critical,Medium,Open,HYP-006,Add "Privacy Promise" to onboarding & remove all ads
+INS-007,Cash-Digital Hybrid Reality,Medium,Low,Open,HYP-008,Add "Manual Cash Entry" feature for hybrid tracking

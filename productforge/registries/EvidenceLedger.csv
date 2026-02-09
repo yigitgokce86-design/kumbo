@@ -1,0 +1,21 @@
+EvidenceID,ClaimSummary,SourceType,SourceURL,Quality,DateAccessed,LinkedHypothesis,Notes
+EVD-0001,Global Digital Pocket Money App market valued at $1.42B in 2024,Market Research,dataintelo.com,A,2026-02-09,HYP-008,CAGR 16.7% through 2033
+EVD-0002,Teen Banking Apps market valued at $2.6B in 2024 with 18.4% CAGR,Market Research,growthmarketreports.com,A,2026-02-09,HYP-008,Adjacent market for expansion
+EVD-0003,22% of US teenage students lack basic financial literacy skills,Academic Research,nefe.org (PISA),A,2026-02-09,HYP-001,International assessment data
+EVD-0004,73% of teens desire more personal finance education,Survey,annuity.org,B,2026-02-09,HYP-001,2021 survey data
+EVD-0005,Children form money attitudes and habits by age 7,Academic Research,gohenry.com/sammyrabbit.com,A,2026-02-09,HYP-001,Critical developmental window
+EVD-0006,Marshmallow Experiment: delayed gratification predicts adult success,Academic Research,Various (Stanford),A,2026-02-09,HYP-003,Higher SAT scores; lower obesity; better social skills
+EVD-0007,Children with strong self-control more likely to own homes and have retirement plans as adults,Longitudinal Study,gohenry.com,A,2026-02-09,HYP-003,Long-term outcome data
+EVD-0008,Turkey fintech investment reached record $194M in 2024,Industry Report,globallegalinsights.com,A,2026-02-09,HYP-008,Strong investment environment
+EVD-0009,45% of Turkish retail payment transactions via mobile banking,Industry Report,turkishlawblog.com,A,2026-02-09,HYP-008,High mobile adoption
+EVD-0010,95% of Turkish youth have bank accounts; 84% use mobile banking,Research Study,bbva.com (Garanti BBVA/Be Node),A,2026-02-09,HYP-006,Digital readiness of target market
+EVD-0011,Papara became Turkey's first fintech unicorn in 2023,News,worldfinancecouncil.org,A,2026-02-09,HYP-008,Market maturity indicator
+EVD-0012,KVKK requires parental consent for all minors under 18,Legal,kvkk.gov.tr/morogluarseven.com,A,2026-02-09,,Compliance requirement
+EVD-0013,Greenlight offers debit card + chore management from $5.99/mo,Competitor Analysis,greenlight.com,A,2026-02-09,,US market leader
+EVD-0014,GoHenry Money Missions provide interactive financial education,Competitor Analysis,gohenry.com,A,2026-02-09,HYP-007,Educational content benchmark
+EVD-0015,Rooster Money offers free virtual tracker without physical card,Competitor Analysis,roostermoney.com,A,2026-02-09,,Validation of software-only model
+EVD-0016,University of Michigan: children as young as 5 show distinct emotional responses to spending/saving,Academic Research,umich.edu,A,2026-02-09,HYP-003,Emotional connection to money starts early
+EVD-0017,Moderate positive correlation between financial literacy and saving habits,Academic Research,rsisinternational.org,B,2026-02-09,HYP-001,Education drives behavior
+EVD-0018,Turkey fintech market projected to reach $7.96B by 2034,Market Research,imarcgroup.com,B,2026-02-09,HYP-008,Long-term growth trajectory
+EVD-0019,Garanti BBVA runs in-branch financial literacy programs for schoolchildren,Industry Example,trendwatching.com,A,2026-02-09,HYP-008,Bank interest in kids finance education
+EVD-0020,Only 18% of high school students rate their financial literacy as somewhat high or above,Survey,unitedwaynca.org,B,2026-02-09,HYP-001,Self-reported knowledge gap
