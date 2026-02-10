@@ -33,19 +33,12 @@ export async function middleware(request: NextRequest) {
         }
     );
 
-    // 1. Beta Gate Check (Enforce BEFORE Auth)
-    const betaCookie = request.cookies.get('p_beta_access');
-    const isBetaPage = request.nextUrl.pathname === '/beta';
-    const isApiRoute = request.nextUrl.pathname.startsWith('/api');
-    // Allow static assets, images, etc.
-
-    // NOTE: Next.js middleware matchers usually handle static exclusions, 
-    // but we double check here to be safe and avoid loops.
-    const isStatic = request.nextUrl.pathname.includes('.') || request.nextUrl.pathname.startsWith('/_next');
-
-    if (!betaCookie && !isBetaPage && !isApiRoute && !isStatic) {
-        return NextResponse.redirect(new URL('/beta', request.url));
-    }
+    // 1. Beta Gate Check (REMOVED for Production/Evaluation)
+    // const betaCookie = request.cookies.get('p_beta_access');
+    // const isBetaPage = request.nextUrl.pathname === '/beta';
+    // if (!betaCookie && !isBetaPage && !isApiRoute && !isStatic) {
+    //     return NextResponse.redirect(new URL('/beta', request.url));
+    // }
 
     // 2. Auth Check + Routing
     const {
